@@ -20,6 +20,6 @@ for sheet in workPart.DrawingSheets:
                 lw.WriteLine(f'Tabular section tag: {obj.Tag} and name {obj.Name}')
                 # Table section TAG
                 tsTag = obj.Tag
-                # Get tabnote TAG
+                # Get tabnote TAG 
                 tnTag = theUFSession.Tabnot.AskTabularNoteOfSection(tsTag)
                 lw.WriteLine(f"Tabular note tag: {tnTag}")
