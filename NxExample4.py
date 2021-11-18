@@ -6,20 +6,19 @@ import NXOpen.Drawings
 theSession = NXOpen.Session.GetSession()
 theUFSession = NXOpen.UF.UFSession.GetUFSession()
 workPart = theSession.Parts.Work
-tnTag = 0 #Int tag value
+tnTag = 0
 lw = theSession.ListingWindow
 lw.Open()
 # Get current sheet
 for sheet in workPart.DrawingSheets:
     # Open sheet (it's necessary to get its data)
     sheet.Open()
-        #For each visible objects in the sheet
+        # For each visible objects in the sheet
     for obj in sheet.View.AskVisibleObjects():
             # If it is a table
             if isinstance(obj, NXOpen.Annotations.TableSection):
-                lw.WriteLine(f'Tabular section tag: {obj.Tag} and name {obj.Name}')
-                # Table section TAG
-                tsTag = obj.Tag
+                for j in dir(obj):
+                    lw.WriteLine(str(j))
+                lw.WriteLine(str(obj.Name))
                 # Get tabnote TAG
-                tnTag = theUFSession.Tabnot.AskTabularNoteOfSection(tsTag)
-                lw.WriteLine(f"Tabular note tag: {tnTag}")
+                # tnTag = theUFSession.Tabnot.AskTabularNoteOfSection(tsTag)
