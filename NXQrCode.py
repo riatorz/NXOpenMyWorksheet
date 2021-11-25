@@ -43,21 +43,21 @@ trueTable = 0
 trueRows = 6
 trueCols = 8
 for i in range(len(myTabNotes)):
-    lw.WriteLine(str(f'{i+1}. tabular note info:\n'))
+    #lw.WriteLine(str(f'{i+1}. tabular note info:\n'))
     numSections = theUfSession.Tabnot.AskNmSections(myTabNotes[i])
-    lw.WriteLine(str(f'Number of sections in tabular note: {numSections}'))
+    #lw.WriteLine(str(f'Number of sections in tabular note: {numSections}'))
     numRows = theUfSession.Tabnot.AskNmRows(myTabNotes[i])
-    lw.WriteLine(str(f'Number of rows in tabular note: {numRows}'))
+    #lw.WriteLine(str(f'Number of rows in tabular note: {numRows}'))
     numCols = theUfSession.Tabnot.AskNmColumns(myTabNotes[i])
-    lw.WriteLine(str(f'Number of columns in tabular note: {numCols}'))
+    #lw.WriteLine(str(f'Number of columns in tabular note: {numCols}'))
     if numRows==trueRows and numCols==trueCols:
         trueTable = i 
 #if you had a one tabular note please use
-# numSections = theUfSession.Tabnot.AskNmSections(myTabNotes[i])
+# numSections = theUfSession.Tabnot.AskNmSections(myTabNotes[0])
 # lw.WriteLine(str(f'Number of sections in tabular note: {numSections}'))
-# numRows = theUfSession.Tabnot.AskNmRows(myTabNotes[i])
+# numRows = theUfSession.Tabnot.AskNmRows(myTabNotes[0])
 # lw.WriteLine(str(f'Number of rows in tabular note: {numRows}'))
-# numCols = theUfSession.Tabnot.AskNmColumns(myTabNotes[i])
+# numCols = theUfSession.Tabnot.AskNmColumns(myTabNotes[0])
 # lw.WriteLine(str(f'Number of columns in tabular note: {numCols}'))
 
 #coltags and celltag
@@ -77,11 +77,10 @@ for j in range(0, trueRows):
             #lw.WriteLine(f"{colTag}-- [{j}{k}] {cellText}")
             if cellText != "" and f"{j}{k}" in myTags:
                 tagDict.update({f"{j}{k}":cellTag})
-                lw.WriteLine(str(f'Cell[{j},{k}] = {cellText}'))
+                #lw.WriteLine(str(f'Cell[{j},{k}] = {cellText}'))
 for i in tagDict:
     AcellText = theUfSession.Tabnot.AskCellText(tagDict[i])
     qrTextDict.update({f"{tagDict[i]}":AcellText})
-lw.WriteLine(f"{qrTextDict}")
 for i in qrTextDict:
     lw.WriteLine(f"{qrTextDict[i]}")
     qrText += f"{qrTextDict[i]};"
@@ -99,12 +98,6 @@ sheetTag = 0
 imageTag = theUfSession.Drf.CreateImageFromFile(imgfile,sheetTag,imgCoordinates)
 if imageTag != 0:
     myImageData = theUfSession.Drf.AskImageData(imageTag)
-    lw.WriteLine("initial settings")
-    lw.WriteLine(f"original image height: {myImageData.Height}")  
-    lw.WriteLine(f"original image width: {myImageData.Width}")  
-    lw.WriteLine(f"aspect ratio locked: {myImageData.AspectRatioLocked}")  
-    lw.WriteLine(f"name: {myImageData.ImageName}")  
-    lw.WriteLine("")
     theUfSession.Drf.SetImageAspectRatioLock(imageTag, False)
     theUfSession.Drf.SetImageWidth(imageTag,float(35))
     theUfSession.Drf.SetImageHeight(imageTag,float(35))
