@@ -13,14 +13,17 @@ First of all, you need [Python](https://www.python.org) to use this code. If you
 
 ```bash
 pip install qrcode
+pip install pillow
 ```
 or
 ```bash
 Start sys.bat
 ```
 
+
 Find `ugii_env_ug.bat` in NX path. **C:/Program Files/Siemens/NX/UGII** the file probably in there.
 Open with notepad.
+You must get administrator permission from properties->security tab for change texts in file.
 
 In the file: **Find `UGII_PYTHONPATH`**. Add your **Python Path** at the end of the line.
 Do same with `PYTHONPATH`
@@ -49,8 +52,6 @@ or press "<kbd>Ctrl</kbd> + 2" on keyboard shortcut.
     <figcaption>Fig.2 - Change the journal language to Python.</figcaption>
   </center>                  
 </pre>
-
-
 
 After that, you need to press <kbd>Alt</kbd> <kbd>F11</kbd> for open journal editor.
 
