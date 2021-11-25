@@ -1,6 +1,13 @@
 # Create QrCode on Siemens NX
 
 This project made for [Sibernetik M&A Applications](https://sibernetik.com.tr) firm.
+#### NXJournaling
+
+> If you don't want to specific thinks for to do, you can change the vb code.
+
+>> **http://nxjournaling.com/comment/678#comment-678**
+
+>> [**TabularNote.vb**](https://github.com/riatorz/NXOpenMyWorksheet/blob/master/TabularNotes.vb)
 
 ## Installation
 
@@ -63,6 +70,8 @@ After that, you need to press <kbd>Alt</kbd> <kbd>F11</kbd> for open journal edi
 </pre>
 
 > If you had an error about NX or the code. Please contact with me. Telegram: **sefaeren0** E-Mail: **sefa.eren000@gmail.com**
+
+
 
 ## License
 [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
