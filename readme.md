@@ -42,7 +42,7 @@ UGII_PYTHONPATH=${UGII_PYTHON_HOME};${UGII_PYTHON_HOME}\Python37.zip;${UGCHECKMA
 ```
 PYTHONPATH=${UGII_PYTHONPATH};${JK_KIT}\lib;${JK_KIT}\library\script;%UserProfile%\AppData\Local\Programs\Python\Python37\Lib\site-packages;%UserProfile%\AppData\Local\Programs\Python\Python37
 ```
-❗❗ **%UserProfile% -> C:\Users\fb_se**
+❗❗ **%UserProfile% -> (Your user profile path) mine is -> C:\Users\fb_se** ❗❗
 
 ## Usage
 
