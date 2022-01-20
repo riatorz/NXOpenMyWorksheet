@@ -37,10 +37,12 @@ Do same with `PYTHONPATH`
 ```
 UGII_PYTHONPATH=${UGII_PYTHON_HOME};${UGII_PYTHON_HOME}\Python37.zip;${UGCHECKMATE_DIR}\python;%UserProfile%\AppData\Local\Programs\Python\Python37\Lib\site-packages;%UserProfile%\AppData\Local\Programs\Python\Python37
 ```
+
+
 ```
 PYTHONPATH=${UGII_PYTHONPATH};${JK_KIT}\lib;${JK_KIT}\library\script;%UserProfile%\AppData\Local\Programs\Python\Python37\Lib\site-packages;%UserProfile%\AppData\Local\Programs\Python\Python37
 ```
-
+❗❗ **%UserProfile% -> C:\Users\fb_se**
 
 ## Usage
 
